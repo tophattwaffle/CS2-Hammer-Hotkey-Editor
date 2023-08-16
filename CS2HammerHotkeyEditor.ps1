@@ -100,7 +100,7 @@ function ConvertTo-KV3() {
         [Parameter(Mandatory = $true)]
         [Hashtable]$kv3
     )
-    $output = "InputBindingList_t`n{`n"
+    $output = "<!-- schema text {2CC83121-F14F-4A36-ABB8-62F4C2799689} generic {198980D8-3A93-4919-B4C6-DD1FB07A3A4B} -->`nInputBindingList_t`n{`n"
 
     #Handle the m_InputMacros
     if ($kv3.InputBindingList_t.m_InputMacros.count -gt 0) {
@@ -1388,13 +1388,18 @@ $menuSaveAs.Add_Click({
         If ($getKey -eq "OK") {
             $outputFileName = $selectSaveAsForm.FileName
             $result = ConvertTo-KV3 $Global:allBinds
-            $result | Out-File $outputFileName
 
             $path = Split-Path -path $outputFileName
             $file = ([io.fileinfo]$outputFileName).basename
 
-            $result | Out-File $outputFileName
-            $result | Out-File "$path\$file$(get-date -Format "MMddyyyy_HHmm").txt"
+            # $result | Out-File $outputFileName
+            # $result | Out-File "$path\$file$(get-date -Format "MMddyyyy_HHmm").txt"
+
+            $backupPath = "$path\$file$(get-date -Format "MMddyyyy_HHmm").txt"
+
+            $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
+            [System.IO.File]::WriteAllLines($outputFileName, $result, $Utf8NoBomEncoding)
+            [System.IO.File]::WriteAllLines($backupPath, $result, $Utf8NoBomEncoding)
         }
     })
 

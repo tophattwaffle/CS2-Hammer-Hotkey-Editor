@@ -6,6 +6,7 @@ This is written entirely in PowerShell since that is what I do a lot of my day j
 Alternatively download the .ps1 file and run it with Powershell. The UI should open.
 
 It will automatically open the Hammer 5 CS2 keybind file if it finds it in the default install on your C:\ drive, otherwise use File -> Open. Other hotkey files are supported, such as the ModelDoc hotkeys. However at the time of writing the unbound keys are not added to the list.
+Default location should be: C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\core\tools\keybindings\hammer_key_bindings.txt
 
 The 3 text fields at the bottom are a .Contains search for each of the respective columns.
 ![image](https://github.com/tophattwaffle/CS2-Hammer-Hotkey-Editor/assets/6774125/4991beef-cdd3-41eb-8356-4cf11e1d3389)

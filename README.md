@@ -11,6 +11,8 @@ Default location should be: C:\Program Files (x86)\Steam\steamapps\common\Counte
 The 3 text fields at the bottom are a .Contains search for each of the respective columns.
 ![image](https://github.com/tophattwaffle/CS2-Hammer-Hotkey-Editor/assets/6774125/4991beef-cdd3-41eb-8356-4cf11e1d3389)
 
+# After changing hotkeys, reload Hammer 5. Don't use the built in "ReloadKeyBindings" as that does not properly work and breaks movement keys.
+
 Hammer 5 ships with many unbound keys. I have manually added these and you can find them at the bottom of the list where you can assign them to a keybind.
 
 Every time you save a file, 2 copies will be saved - this is to serve as a backup for your settings. The first copy with the desired filename, the 2nd with the save date/time. This cannot be disabled unless you edit the PS1 file.

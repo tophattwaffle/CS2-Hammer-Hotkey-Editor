@@ -292,6 +292,7 @@ Function Merge-UnboundKeys()
 "HammerEditorSession","SteamAudioGenerateProbes"
 "HammerEditorSession","SteamAudioBakeReverb"
 "HammerEditorSession","SteamAudioBakePaths"
+"HammerEditorSession","ToggleSnapRotation"
 
 "HammerApp","FileClose"
 "HammerApp","ClearRecentFiles"
